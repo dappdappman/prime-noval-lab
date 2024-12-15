@@ -1,0 +1,196 @@
+.connectSection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.8px);
+    -webkit-backdrop-filter: blur(9.8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.connectInnerSection {
+    background: white;
+    color: black;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.connectHeader {
+    padding: 20px;
+    border-bottom: 1px solid rgb(21, 55, 95, .1);
+    text-align: center;
+}
+.connectTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+.connectText {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    width: fit-content;
+    color: #3457f6;
+    font-size: 12px;
+    background: rgb(52, 87, 246, .15);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.connectStats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+.statCard {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+.statImgContainer {
+    width: 50px;
+}
+.statContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.statCount1 {
+    width: fit-content;
+    color: dodgerblue;
+    font-size: 12px;
+    background: rgb(30, 144, 255, .15);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.statCount2 {
+    width: fit-content;
+    color: rgb(111, 0, 162);
+    font-size: 12px;
+    background: rgb(111, 0, 162, .15);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.statCount3 {
+    width: fit-content;
+    color: crimson;
+    font-size: 12px;
+    background: rgb(220, 20, 60, .15);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.statCount4 {
+    width: fit-content;
+    color: #03a300;
+    font-size: 12px;
+    background: rgb(55, 246, 52, .15);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.walletConnect {
+    background: #0052ff;
+    padding: 10px 40px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    margin: auto;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.termsText {
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    color: rgb(149, 149, 149);
+    width: 70%;
+    margin: auto;
+}
+
+/* second UI */
+.walletArrayContainer {
+ padding: 0px 24px;
+}
+.searchContainer {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid rgb(235, 235, 235);
+    height: 60px;
+    margin-bottom: 10px;
+}
+.searchInput {
+    background: none;
+    height: 100%;
+    width: 90%;
+    outline: none;
+    border: none;
+}
+.arrayContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    height: 450px;
+    padding: 10px 0px;
+    width: 100%;
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+  
+.arrayContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.arrayContainer > div {
+    width: 100%;
+    max-width: 90px;
+    height: 100px;
+    background: whitesmoke;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 11px;
+}
+.walletImage {
+    width: 70px;
+    background-color: ghostwhite;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.walletName {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    text-align: center;
+    height: 30%;
+}

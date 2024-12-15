@@ -1,0 +1,78 @@
+.traysSection {
+    padding: 40px 24px;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.traysTitle {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.traysDescription {
+    font-size: 20px;
+    text-align: center;
+}
+.traysHighlight {
+    color: #15375f;
+}
+.traysCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 40px 24px;
+    padding-top: 80px;
+}
+.trayCard {
+    background: rgba(21, 55, 95, 0.3);
+    padding: 40px 20px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+.trayCardContent {
+    width: 70%;
+}
+.trayCard:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+.trayCardTitle {
+    font-size: 19px;
+    font-weight: 800;
+}
+.trayCardDescription {
+    font-size: 16px;
+}
+.trayCardIcon {
+    border-right: 1px solid white;
+    width: 30%;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 1000px) {
+    .traysCardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+@media screen and (max-width: 600px) {
+    .traysCardsContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .traysTitle {
+        font-size: 30px;
+    }
+}

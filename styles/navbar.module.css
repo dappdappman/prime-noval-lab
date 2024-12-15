@@ -1,0 +1,24 @@
+.navbarContainer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.linksContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.navLink {
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.navLink:hover {
+    color: #15375f;
+}

@@ -1,0 +1,92 @@
+
+.connectInnerSection {
+    background: white;
+    color: black;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.connectHeader {
+    padding: 20px;
+    border-bottom: 1px solid rgb(21, 55, 95, .1);
+    text-align: center;
+}
+.connectTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* second UI */
+.walletArrayContainer {
+ padding: 0px 24px;
+}
+.searchContainer {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid rgb(235, 235, 235);
+    height: 60px;
+    margin-bottom: 10px;
+}
+.searchInput {
+    background: none;
+    height: 100%;
+    width: 90%;
+    outline: none;
+    border: none;
+}
+.arrayContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    height: 450px;
+    padding: 10px 0px;
+    width: 100%;
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+  
+.arrayContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.arrayContainer > div {
+    width: 100%;
+    max-width: 90px;
+    height: 100px;
+    background: rgb(249, 249, 249);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 11px;
+    transition: .3s ease-in-out;
+}
+.arrayContainer > div:hover {
+    background: whitesmoke;
+}
+.walletImage {
+    width: 60px;
+    background-color: ghostwhite;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.walletName {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    text-align: center;
+    height: 30%;
+}

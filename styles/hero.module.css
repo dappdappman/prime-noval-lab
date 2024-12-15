@@ -1,0 +1,124 @@
+.heroMain {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+}
+.heroSectionTransparent {
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 20;
+}
+.heroSectionCoverImage {
+    height: 90vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.heroContent {
+    height: 90vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    padding-top: 100px;
+}
+.heroTitle {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 80px;
+    margin-bottom: 30px;
+}
+
+.heroDescription {
+    font-size: 25px;
+    width: 100%;
+    max-width: 1250px;
+    margin-bottom: 30px;
+}
+
+.heroButton {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 50px;
+    border-radius: 200px;
+    background-color: #15375f;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .heroTitle {
+        font-size: 65px;
+        line-height: 70px;
+    }
+    .heroDescription {
+        font-size: 22px;
+    }
+    .heroButton {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .heroTitle {
+        font-size: 55px;
+        line-height: 60px;
+    }
+    .heroDescription {
+        font-size: 20px;
+    }
+    .heroButton {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .heroDescription {
+        font-size: 18px;
+    }
+    .heroButton {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .heroTitle {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .heroDescription {
+        font-size: 16px;
+    }
+    .heroButton {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .heroTitle {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .heroDescription {
+        font-size: 14px;
+    }
+    .heroButton {
+        font-size: 12px;
+    }
+}

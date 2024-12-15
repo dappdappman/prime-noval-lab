@@ -1,0 +1,85 @@
+
+.connectInnerSection {
+    background: white;
+    color: black;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.connectHeader {
+    padding: 20px;
+    border-bottom: 1px solid rgb(21, 55, 95, .1);
+    text-align: center;
+}
+.connectTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.walletContainer {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.walletImageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.walletImage {
+    width: fit-content;
+    width: 90px;
+    border-radius: 25px;
+    z-index: 2;
+    padding: 2px;
+    background: white;
+}
+.walletDescription {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.toggleOptionsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    gap: 5px 17px;
+    justify-content: space-between;
+}
+.toggleOption {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 11px;
+}
+.toggleLabel {
+    width: fit-content;
+    height: fit-content;
+}
+
+.tabContainer {
+    padding: 0px 24px;
+    padding-bottom: 24px;
+    font-size: 13px;
+}
+.tabHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.tabButton {
+    width: 33.33%;
+}
+
+.activeTab {
+    color: dodgerblue;
+    font-weight: 700;
+}
+
