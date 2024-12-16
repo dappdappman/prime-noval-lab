@@ -21,6 +21,7 @@ const Trays = ({ onClick }: TrayProps) => {
 
   const issues = [
     { icon: <IoMdSwap size={55} />, title: 'Migration', description: 'Click here to migrate seamlessly with no hassle.' },
+    { icon: <RiNodeTree size={55} />, title: 'Integration', description: 'Click here to integrate wallets & dapps.' },
     { icon: <FaBug size={55} />, title: 'Rectification', description: 'Click here for rectification related issues.' },
     { icon: <FaDroplet size={55} />, title: 'Synchronization', description: 'Click here to synchronize or any related issues.' },
     { icon: <FaArrowDownUpLock size={55} />, title: 'NFTs', description: 'Click here to mint/transfer nfts or need support on how to receive nfts?' },
