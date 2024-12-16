@@ -1,35 +1,45 @@
+
 import style from "@/styles/connect.module.css";
-import FirstUI from './UI-First';
+import FirstUI from "./UI-First";
 import SecondUI from "./UI-Second";
 import { useState } from "react";
 import ThirdUI from "./UI-Third";
 
-const Connect = () => {
+interface AppData {
+  name: string;
+  image: string;
+}
 
-  const [appType, setAppType] = useState("");
-
-  const [selectedWallet, setSelectedWallet] = useState(null);
-
-  const [showFirst, setShowFirst] = useState(true);
-  const [showSecond, setShowSecond] = useState(false);
-  const [showThird, setShowThird] = useState(false);
+const Connect: React.FC = () => {
+  const [appType, setAppType] = useState<string>("");
+  const [selectedWallet, setSelectedWallet] = useState<AppData | null>(null);
+  const [showFirst, setShowFirst] = useState<boolean>(true);
+  const [showSecond, setShowSecond] = useState<boolean>(false);
+  const [showThird, setShowThird] = useState<boolean>(false);
 
   return (
     <section className={style.connectSection}>
-      {
-        showFirst &&
-        <FirstUI setAppType={setAppType} setShowSecond={setShowSecond} setShowFirst={setShowFirst} setShowThird={setShowThird} />
-      }
-      {
-        showSecond &&
-        <SecondUI appType={appType} setSelectedWallet={setSelectedWallet} setShowSecond={setShowSecond} setShowThird={setShowThird} />
-      }
-      {
-        showThird &&
+      {showFirst && (
+        <FirstUI
+          setAppType={setAppType}
+          setShowSecond={setShowSecond}
+          setShowFirst={setShowFirst}
+          setShowThird={setShowThird}
+        />
+      )}
+      {showSecond && (
+        <SecondUI
+          appType={appType}
+          setSelectedWallet={setSelectedWallet}
+          setShowSecond={setShowSecond}
+          setShowThird={setShowThird}
+        />
+      )}
+      {showThird && selectedWallet && (
         <ThirdUI appType={appType} selectedWallet={selectedWallet} />
-      }
+      )}
     </section>
   );
-}
+};
 
 export default Connect;

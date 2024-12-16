@@ -6,43 +6,58 @@ import { chains } from "@/src/utils/chains.data";
 import style from "@/styles/ui-second.module.css";
 import { wallets } from "@/src/utils/wallets.data";
 
-type AppData = { name: string; image: string };
+// Define the shape of app data
+interface AppData {
+  name: string;
+  image: string;
+}
 
-type SecondUIProps = {
+// Props for SecondUI component
+interface SecondUIProps {
   appType: string;
   setSelectedWallet: (wallet: AppData) => void;
   setShowSecond: (show: boolean) => void;
   setShowThird: (show: boolean) => void;
-};
+}
 
-const SecondUI = ({
+const SecondUI: React.FC<SecondUIProps> = ({
   appType,
   setSelectedWallet,
   setShowSecond,
   setShowThird,
-}: SecondUIProps) => {
+}) => {
   const [arrayData, setArrayData] = useState<AppData[]>([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   useEffect(() => {
     let data: AppData[] = [];
     if (appType === "Wallet") {
-      data = wallets;
+      data = wallets.map((item) => ({
+        ...item,
+        image: typeof item.image === "string" ? item.image : item.image.src,
+      }));
     } else if (appType === "Chain") {
-      data = chains;
+      data = chains.map((item) => ({
+        ...item,
+        image: typeof item.image === "string" ? item.image : item.image.src,
+      }));
     } else if (appType === "Dapp") {
-      data = dapps;
+      data = dapps.map((item) => ({
+        ...item,
+        image: typeof item.image === "string" ? item.image : item.image.src,
+      }));
     }
-
+  
     // Filter data based on search term
     const filteredData = searchTerm
       ? data.filter((item) =>
           item.name.toLowerCase().includes(searchTerm.toLowerCase())
         )
       : data;
-
+  
     setArrayData(filteredData);
   }, [appType, searchTerm]);
+  
 
   return (
     <section className={style.connectInnerSection}>
@@ -76,6 +91,8 @@ const SecondUI = ({
                   src={item.image}
                   alt={item.name}
                   className={style.walletImage}
+                  width={50} // Replace with actual width
+                  height={50} // Replace with actual height
                 />
                 <p className={style.walletName}>
                   {item.name.length > 9
