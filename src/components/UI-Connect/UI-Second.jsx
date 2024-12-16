@@ -6,31 +6,17 @@ import { chains } from "@/src/utils/chains.data";
 import style from "@/styles/ui-second.module.css";
 import { wallets } from "@/src/utils/wallets.data";
 
-// Define the shape of app data
-interface AppData {
-  name: string;
-  image: string;
-}
-
-// Props for SecondUI component
-interface SecondUIProps {
-  appType: string;
-  setSelectedWallet: (wallet: AppData) => void;
-  setShowSecond: (show: boolean) => void;
-  setShowThird: (show: boolean) => void;
-}
-
-const SecondUI: React.FC<SecondUIProps> = ({
+const SecondUI = ({
   appType,
   setSelectedWallet,
   setShowSecond,
   setShowThird,
 }) => {
-  const [arrayData, setArrayData] = useState<AppData[]>([]);
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [arrayData, setArrayData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    let data: AppData[] = [];
+    let data = [];
     if (appType === "Wallet") {
       data = wallets.map((item) => ({
         ...item,
