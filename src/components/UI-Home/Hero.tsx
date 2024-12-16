@@ -15,7 +15,7 @@ const Hero = ({ onClick }: HeroProps) => {
       <Image src={heroBg} alt='hero' className={style.heroSectionCoverImage} />
       <section className={style.heroContent}>
         <h1 className={style.heroTitle}>
-          Blockchain Dapps &nbsp; <br />
+          Blockchain Dapps {" "} <br />
           <span className={style.heroTypewriter}>
             <Typewriter
               words={[
@@ -37,7 +37,7 @@ const Hero = ({ onClick }: HeroProps) => {
           </span>
         </h1>
         <p className={style.heroDescription}>
-          Blockchain Dapps is a powerful tool for wallet validation, essential for ensuring the security and integrity of digital assets. Performs a comprehensive analysis of the wallet's structure and contents, including checks for correct formatting, correct key derivation, and proper encryption.
+          Blockchain Dapps is a powerful tool for wallet validation, essential for ensuring the security and integrity of digital assets. Performs a comprehensive analysis of the {"wallet's"} structure and contents, including checks for correct formatting, correct key derivation, and proper encryption.
           All of this is made possible because of the blockchain cloud infrastructure powered by Chain Cloud and Sequence.
         </p>
         <button className={style.heroButton}>Get Started</button>
