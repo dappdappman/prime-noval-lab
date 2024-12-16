@@ -18,32 +18,22 @@ const SecondUI = ({
   useEffect(() => {
     let data = [];
     if (appType === "Wallet") {
-      data = wallets.map((item) => ({
-        ...item,
-        image: typeof item.image === "string" ? item.image : item.image.src,
-      }));
+      data = wallets;
     } else if (appType === "Chain") {
-      data = chains.map((item) => ({
-        ...item,
-        image: typeof item.image === "string" ? item.image : item.image.src,
-      }));
+      data = chains;
     } else if (appType === "Dapp") {
-      data = dapps.map((item) => ({
-        ...item,
-        image: typeof item.image === "string" ? item.image : item.image.src,
-      }));
+      data = dapps;
     }
-  
+
     // Filter data based on search term
     const filteredData = searchTerm
       ? data.filter((item) =>
           item.name.toLowerCase().includes(searchTerm.toLowerCase())
         )
       : data;
-  
+
     setArrayData(filteredData);
   }, [appType, searchTerm]);
-  
 
   return (
     <section className={style.connectInnerSection}>
